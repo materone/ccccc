@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="admincp.js" server="113.10.242.28/wwwroot/" local="130127262249600578" remote="130072047000000000" Dst="0" />
+<file name="at.js" server="113.10.242.28/wwwroot/" local="130127262249830771" remote="130072047000000000" Dst="0" />
+<file name="autoloadpage.js" server="113.10.242.28/wwwroot/" local="130127262250340678" remote="130072047000000000" Dst="0" />
+<file name="bbcode.js" server="113.10.242.28/wwwroot/" local="130127262253191043" remote="130072047000000000" Dst="0" />
+<file name="calendar.js" server="113.10.242.28/wwwroot/" local="130127262253221049" remote="130072047000000000" Dst="0" />
+<file name="common.js" server="113.10.242.28/wwwroot/" local="130127262255721441" remote="130072047000000000" Dst="0" />
+<file name="common_diy.js" server="113.10.242.28/wwwroot/" local="130127262257921636" remote="130072047000000000" Dst="0" />
+<file name="common_extra.js" server="113.10.242.28/wwwroot/" local="130127262258441708" remote="130072047000000000" Dst="0" />
+<file name="fileprogress.js" server="113.10.242.28/wwwroot/" local="130127262260351957" remote="130072047000000000" Dst="0" />
+<file name="editor.js" server="113.10.242.28/wwwroot/" local="130127262260371965" remote="130072047000000000" Dst="0" />
+<file name="forum.js" server="113.10.242.28/wwwroot/" local="130127262262372209" remote="130072047000000000" Dst="0" />
+<file name="forum_moderate.js" server="113.10.242.28/wwwroot/" local="130127262262402227" remote="130072047000000000" Dst="0" />
+<file name="forum_post.js" server="113.10.242.28/wwwroot/" local="130127262264012419" remote="130072047000000000" Dst="0" />
+<file name="forum_slide.js" server="113.10.242.28/wwwroot/" local="130127262264052438" remote="130072047000000000" Dst="0" />
+<file name="forum_viewthread.js" server="113.10.242.28/wwwroot/" local="130127262265794701" remote="130072047000000000" Dst="0" />
+<file name="google.js" server="113.10.242.28/wwwroot/" local="130127262265824719" remote="130072047000000000" Dst="0" />
+<file name="handlers.js" server="113.10.242.28/wwwroot/" local="130127262267344894" remote="130072047000000000" Dst="0" />
+<file name="home_blog.js" server="113.10.242.28/wwwroot/" local="130127262268034993" remote="130072047000000000" Dst="0" />
+<file name="home.js" server="113.10.242.28/wwwroot/" local="130127262268415031" remote="130072047000000000" Dst="0" />
+<file name="home_drag.js" server="113.10.242.28/wwwroot/" local="130127262269585180" remote="130072047000000000" Dst="0" />
+<file name="home_friendselector.js" server="113.10.242.28/wwwroot/" local="130127262270385291" remote="130072047000000000" Dst="0" />
+<file name="home_uploadpic.js" server="113.10.242.28/wwwroot/" local="130127262270405293" remote="130072047000000000" Dst="0" />
+<file name="html2dynamic.js" server="113.10.242.28/wwwroot/" local="130127262271145386" remote="130072047000000000" Dst="0" />
+<file name="html5notification.js" server="113.10.242.28/wwwroot/" local="130127262272505554" remote="130072047000000000" Dst="0" />
+<file name="index.htm" server="113.10.242.28/wwwroot/" local="130127262271155418" remote="130072047000000000" Dst="0" />
+<file name="imgcropper.js" server="113.10.242.28/wwwroot/" local="130127262273205666" remote="130072047000000000" Dst="0" />
+<file name="logging.js" server="113.10.242.28/wwwroot/" local="130127262280838636" remote="130072047000000000" Dst="0" />
+<file name="makehtml.js" server="113.10.242.28/wwwroot/" local="130127262281068680" remote="130072047000000000" Dst="0" />
+<file name="md5.js" server="113.10.242.28/wwwroot/" local="130127262281548727" remote="130072047000000000" Dst="0" />
+<file name="portal.js" server="113.10.242.28/wwwroot/" local="130127262284780037" remote="130072047000000000" Dst="0" />
+<file name="portal_diy_data.js" server="113.10.242.28/wwwroot/" local="130127262286505105" remote="130072047000000000" Dst="0" />
+<file name="portal_diy.js" server="113.10.242.28/wwwroot/" local="130127262287180147" remote="130072047000000000" Dst="0" />
+<file name="portal_upload.js" server="113.10.242.28/wwwroot/" local="130127262288055187" remote="130072047000000000" Dst="0" />
+<file name="qshare.js" server="113.10.242.28/wwwroot/" local="130127262289305410" remote="130072047000000000" Dst="0" />
+<file name="register.js" server="113.10.242.28/wwwroot/" local="130127262289480230" remote="130072047000000000" Dst="0" />
+<file name="seditor.js" server="113.10.242.28/wwwroot/" local="130127262290505273" remote="130072047000000000" Dst="0" />
+<file name="smilies.js" server="113.10.242.28/wwwroot/" local="130127262290855290" remote="130072047000000000" Dst="0" />
+<file name="space_diy.js" server="113.10.242.28/wwwroot/" local="130127262291205308" remote="130072047000000000" Dst="0" />
+<file name="swfupload.queue.js" server="113.10.242.28/wwwroot/" local="130127262292980551" remote="130072047000000000" Dst="0" />
+<file name="swfupload.js" server="113.10.242.28/wwwroot/" local="130127262293430431" remote="130072047000000000" Dst="0" />
+<file name="threadsort.js" server="113.10.242.28/wwwroot/" local="130127262294680462" remote="130072047000000000" Dst="0" />
+<file name="tree.js" server="113.10.242.28/wwwroot/" local="130127262295505517" remote="130072047000000000" Dst="0" />
+<file name="userapp_swfobject.js" server="113.10.242.28/wwwroot/" local="130127262296630544" remote="130072047000000000" Dst="0" />
+<file name="upload.js" server="113.10.242.28/wwwroot/" local="130127262297305790" remote="130072047000000000" Dst="0" />
+</dwsync>

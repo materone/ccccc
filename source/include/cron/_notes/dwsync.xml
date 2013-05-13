@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="cron_announcement_daily.php" server="113.10.242.28/wwwroot/" local="130127260102926381" remote="130072047000000000" Dst="0" />
+<file name="cron_checkpatch_daily.php" server="113.10.242.28/wwwroot/" local="130127260102936376" remote="130072047000000000" Dst="0" />
+<file name="cron_cleanfeed.php" server="113.10.242.28/wwwroot/" local="130127260102946373" remote="130072047000000000" Dst="0" />
+<file name="cron_cleantrace.php" server="113.10.242.28/wwwroot/" local="130127260104758459" remote="130072047000000000" Dst="0" />
+<file name="cron_cleannotification.php" server="113.10.242.28/wwwroot/" local="130127260104768466" remote="130072047000000000" Dst="0" />
+<file name="cron_cleanup_daily.php" server="113.10.242.28/wwwroot/" local="130127260106218648" remote="130072047000000000" Dst="0" />
+<file name="cron_follow_daily.php" server="113.10.242.28/wwwroot/" local="130127260106228646" remote="130072047000000000" Dst="0" />
+<file name="cron_cleanup_monthly.php" server="113.10.242.28/wwwroot/" local="130127260106678696" remote="130072047000000000" Dst="0" />
+<file name="cron_medal_daily.php" server="113.10.242.28/wwwroot/" local="130127260108619357" remote="130072047000000000" Dst="0" />
+<file name="cron_magic_daily.php" server="113.10.242.28/wwwroot/" local="130127260108629379" remote="130072047000000000" Dst="0" />
+<file name="cron_member_optimize_daily.php" server="113.10.242.28/wwwroot/" local="130127260109359457" remote="130072047000000000" Dst="0" />
+<file name="cron_onlinetime_monthly.php" server="113.10.242.28/wwwroot/" local="130127260110504746" remote="130072047000000000" Dst="0" />
+<file name="cron_promotion_hourly.php" server="113.10.242.28/wwwroot/" local="130127260111294679" remote="130072047000000000" Dst="0" />
+<file name="cron_publish_halfhourly.php" server="113.10.242.28/wwwroot/" local="130127260111994770" remote="130072047000000000" Dst="0" />
+<file name="cron_secqaa_daily.php" server="113.10.242.28/wwwroot/" local="130127260113528864" remote="130072047000000000" Dst="0" />
+<file name="cron_security_cleanup_lastpost.php" server="113.10.242.28/wwwroot/" local="130127260114189099" remote="130072047000000000" Dst="0" />
+<file name="cron_security_daily.php" server="113.10.242.28/wwwroot/" local="130127260115319307" remote="130072047000000000" Dst="0" />
+<file name="cron_tag_daily.php" server="113.10.242.28/wwwroot/" local="130127260116009334" remote="130072047000000000" Dst="0" />
+<file name="cron_todayheats_daily.php" server="113.10.242.28/wwwroot/" local="130127260118339476" remote="130072047000000000" Dst="0" />
+<file name="cron_threadexpiry_hourly.php" server="113.10.242.28/wwwroot/" local="130127260118359474" remote="130072047000000000" Dst="0" />
+<file name="cron_todaypost_daily.php" server="113.10.242.28/wwwroot/" local="130127260119089564" remote="130072047000000000" Dst="0" />
+<file name="cron_todayviews_daily.php" server="113.10.242.28/wwwroot/" local="130127260120434656" remote="130072047000000000" Dst="0" />
+<file name="index.htm" server="113.10.242.28/wwwroot/" local="130127260121184683" remote="130072047000000000" Dst="0" />
+</dwsync>

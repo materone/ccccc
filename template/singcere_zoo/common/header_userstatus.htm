@@ -1,0 +1,67 @@
+<div class="membercontrol">
+	<!--{if $_G['uid']}-->
+	<ul class="nav-list main-menu">
+		<li class="menu-item snotice"><a id="snotice_menu" href="home.php?mod=space&do=notice" class="menu-link notification"><s></s><!--{if $_G[member][newprompt]}--><span class="unread-num png">$_G[member][newprompt]</span><!--{/if}--></a>
+		</li>
+		<li class="menu-item msg"> <a id="msg_menu" href="home.php?mod=space&do=pm" class="menu-link msg"><s></s><!--{if $_G[member][newpm]}--><span class="unread-num png">{$_G[member][newpm]}</span><!--{/if}--></a>
+		</li>
+	</ul>
+
+	<div class="user-menu">
+		<a href="home.php?mod=space&uid=1&do=profile" onMouseOver="showMenu({'ctrlid':'user_menu','pos':'34!','ctrlclass':'a','duration':2});" class="arrow"><s class="png"></s></a><span class="user-img"><a href="home.php?mod=space&uid=1&do=profile" onMouseOver="showMenu({'ctrlid':'user_menu','pos':'34!','ctrlclass':'a','duration':2});"><!--{avatar($_G[uid],small)}--></a></span>
+		<ul class="sub-menu" id="user_menu_menu" style="display: none;">
+			<!--{if check_diy_perm($topic)}-->
+			<li>$diynav</li>
+			<!--{/if}-->
+
+			<li><!--{hook/global_usernav_extra1}--></li>
+			<li><!--{hook/global_usernav_extra2}--></li>
+			<li><!--{hook/global_usernav_extra3}--></li>
+
+			<!--{loop $_G['setting']['mynavs'] $nav}-->
+			<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+			{eval $nav[code] = str_replace('style="', '_style="', $nav[code]);}
+			<li>$nav[code]</li>
+			<!--{/if}-->
+			<!--{/loop}-->
+			<!--{hook/global_usernav_extra3}-->
+			<li><a href="home.php?mod=spacecp">{lang setup}</a></li>
+			<!--{if ($_G['group']['allowmanagearticle'] || $_G['group']['allowpostarticle'] || $_G['group']['allowdiy'] || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 6) || getstatus($_G['member']['allowadmincp'], 2) || getstatus($_G['member']['allowadmincp'], 3))}-->
+			<li><a href="portal.php?mod=portalcp"><!--{if $_G['setting']['portalstatus'] }-->{lang portal_manage}<!--{else}-->{lang portal_block_manage}<!--{/if}--></a></li>
+			<!--{/if}-->
+			<!--{if $_G['uid'] && $_G['group']['radminid'] > 1}-->
+			<li><a href="forum.php?mod=modcp&fid=$_G[fid]" target="_blank">{lang forum_manager}</a></li>
+			<!--{/if}-->
+			<!--{if $_G['uid'] && $_G['adminid'] == 1 && $_G['setting']['cloud_status']}-->
+			<li><a href="admin.php?frames=yes&action=cloud&operation=applist" target="_blank">{lang cloudcp}</a></li>
+			<!--{/if}-->
+			<!--{if $_G['uid'] && getstatus($_G['member']['allowadmincp'], 1)}-->
+			<li><a href="admin.php" target="_blank">{lang admincp}</a></li>
+			<!--{/if}-->
+			<!--{hook/global_usernav_extra4}-->
+			<li><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></li>
+		</ul>
+	</div>
+
+
+	<!--{elseif !empty($_G['cookie']['loginuser'])}-->
+	<ul class="nav-list main-menu">
+		<li class="menu-item"><a id="loginuser" class="menu-link"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></li>
+		<li class="menu-item"><a class="menu-link" href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a></li>
+		<li class="menu-item"><a class="menu-link" href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></li>
+	</ul>
+	<!--{elseif !$_G[connectguest]}-->
+	<ul class="nav-list main-menu">
+		<li class="menu-item"><a href="javascript:;" onClick="javascript:lsSubmit();" class="menu-link">{lang login}</a></li>
+		<li class="menu-item"><a href="member.php?mod={$_G[setting][regname]}" class="menu-link">$_G['setting']['reglinkname']</a></li>
+		<!--这里删除 global_login_extra 插件入口-->
+	</ul>
+	<div style="display:none"><!--{template member/login_simple}--></div>
+	<!--{else}-->
+	<ul class="nav-list main-menu">
+		<li class="menu-item"><a href="home.php?mod=spacecp&ac=usergroup" class="menu-link">{$_G[member][username]}</a></li>
+		<li class="menu-item"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" class="menu-link">{lang logout}</a></li>
+		<!--这里删除 global_usernav_extra1 插件入口-->
+	</ul>
+	<!--{/if}-->
+</div>

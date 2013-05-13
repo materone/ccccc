@@ -1,0 +1,38 @@
+/*
+[name]青[/name]
+[iconbgcolor]#429296[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+body { background: #FFF url(bgimg.jpg) no-repeat 50% 0; }
+.wmff_header ,#hd{
+background: none;
+}
+
+
+
+.bm_h, .tl th, .tl td { border-bottom-color: #CDCDCD; }
+ 
+
+/* 重定义 {SPECIALBG} */
+.bmn, .bm_h, td.pls, .ad td.plc, div.exfm, .tb a, .tb_h, .ttp li.a a, div.uo a, input#addsubmit_btn, #gh .bm .bm_h, .appnew, .apphot { background-color: #EBF5F6; }
+
+.ct2_a, .ct3_a { background-image: url(vlineb.png); }
+.tbn li.a { background: #FFF; }
+	#nv_portal.pg_portalcp .ct2_a_r, #nv_forum.pg_post .ct2_a_r { background-image: none; }
+
+/* 重定义 {SPECIALBORDER} */
+.bmn, .pg a, .pgb.a, .pg strong, .card, .card .o, div.exfm  { border-color: #C5E6DF; }
+.pg strong { background-color: #C5E6DF; }
+.pn, .tb .o, .tb .o a { background-image: url(pn.png); }
+	.pnc, a.pnc, .tb .o { border-color: #066; }
+
+
+.ad td.pls { background-color: #C5E6DF; }
+
+ 
+ 
+/* 重定义下拉菜单 */
+.p_pop a { border-bottom-color: #EBF5F6; }
+	.p_pop a:hover, .p_pop a.a, #sctype_menu .sca { background-color: #EBF5F6; color: #429296; }
+	.blk a:hover { background-color: transparent; }

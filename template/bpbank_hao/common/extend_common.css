@@ -1,0 +1,61 @@
+/* 导航条 */
+#nv_wrap {  background: url("{STYLEIMGDIR}/bg_nav_wrap.png") repeat-x scroll 0 50% #129E0A; border-bottom: 1px solid #227405; border-top: 1px solid #119209; padding-bottom: 1px; }
+	#nv li { background: url("{STYLEIMGDIR}/menu-bar.png") no-repeat left 50%; }
+		#nv li a:hover { background: none; color: #F2FF8E; }
+	a#qmenu, a#qmenu.a { background: url("{STYLEIMGDIR}/arrwd.gif") no-repeat right 50%; color: #fff; width: 80px; }
+
+/* 顶部导航 */
+#toptb { border-bottom: 1px solid #EDEDED; background: {TOPTBBEIJINGSE}; }
+
+/*论坛首页边框*/
+.fl, .bm { border-color: #eee;  }
+.fl .bm_h { background: #f5f5f5 none;  _border-color: #ddd; border-color: #fff; -webkit-box-shadow: 3px 3px 15px rgba(100,100,100,0.3); -o-box-shadow: 3px 3px 15px rgba(100,100,100,0.3); -moz-box-shadow: 3px 3px 15px rgba(100,100,100,0.3); -ms-box-shadow: 3px 3px 15px rgba(100,100,100,0.3); box-shadow: 3px 3px 15px rgba(100,100,100,0.3);  }
+.fl .bm_h h2 a { font-family: 微软雅黑,'Microsoft YaHei',黑体,SimHei; font-size: 20px; font-weight: normal; color: #F96C10; }
+
+/* 搜索条 */
+#scbar { background: transparent none; border: 1px solid #E9EFF5; margin-top: 5px; }
+	.scbar_icon_td { background: url("{STYLEIMGDIR}/search.png") no-repeat scroll 0 -50px transparent; }
+	.scbar_btn_td { background-image: url("{STYLEIMGDIR}/search.png"); }
+
+/*  重置有序列表ol的图标 */
+.xl ol, ol.xl { background-image: url("{STYLEIMGDIR}/sortnum.png"); }
+
+/*重置框架标题背景为透明色*/
+.frame, .frame-tab { background-color: transparent; }
+
+/*重置3:1框架默认背景图*/
+.frame-3-1 { background: url("{STYLEIMGDIR}/line_k.png") no-repeat scroll left top transparent; }
+
+/*重置框架中的标题的默认背景图片*/
+.frame-title, .blocktitle { background: url("{STYLEIMGDIR}/icons2.png") no-repeat scroll 0 -45px transparent; margin-top: 15px; margin-bottom: 10px; }
+
+/* 重置框架中框架和模块的标题-左边主标题，后来增加的下一条规则设置 */
+.frame .titletext {color: #312E2C; font-family: 微软雅黑,'Microsoft YaHei',黑体,SimHei,'Arial black'; font-size: 20px; font-weight: 400; height: 28px; line-height: 28px; text-indent: 15px; }
+/* 重置框架中框架和模块的标题右侧的小标题，后来增加的，比如“更多” */
+.frame  .subtitle { font-size: 14px; margin-right: 20px; font-weight: normal; }
+	/*  3:1框架中 左侧部分即占 3 的部分的标题背景图片重置  */
+		.frame-3-1 .frame-3-1-l .frame-title { background: url("{STYLEIMGDIR}/icons.png") no-repeat scroll 0 -5px transparent; }
+
+
+/*以下为diy模块模板定义*/
+	/* 定义模块中无链接的文字颜色和样式 */
+	.module { color: #888888; }
+	/*  缩略图模块中普通链接 css钩子 diy_slt*/
+	.diy_slt li { margin: auto 10px auto 0; }
+	.diy_slt img { margin: 18px auto 5px ; }
+	/* 第一条为略图显示的模块 css钩子 diy_liebiao */
+	.diy_liebiao div { text-align: center; margin: 3px auto 10px; }
+	.diy_liebiao div a { margin-bottom: 5px; font-size: 16px; font-weight: bold; display: block; width: 230px; overflow: hidden; white-space: nowrap; }
+	.diy_liebiao div a img { width: 230px; height: 150px; }
+	/* 精品推荐处单行diy，diy_dh_slt */
+	.diy_dh_slt { text-align: center; margin: auto 10px; height: 150px; overflow: hidden; }
+	/* 幻灯右侧焦点模式 */
+	.diy_jiaodian dl { margin: 3px auto 8px;  }
+
+/*论坛页面修改*/
+	/*帖子内容页左侧信息栏*/
+	#postlist .pls { background-color: #f6f6f6; border-right: 1px solid #ccc; }
+	.ad .pls { background-color: #ddd; }
+	.pn { background-image: url("{STYLEIMGDIR}/pn.png"); background-color: #109C08; border-color: #ddd; }
+	/* 帖子内容页每楼盒子阴影 */
+	#postlist table.plhin{ -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2); -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2); -o-box-shadow: 0 5px 10px rgba(0,0,0,0.2); -ms-box-shadow: 0 5px 10px rgba(0,0,0,0.2); box-shadow: 0 5px 10px rgba(0,0,0,0.2); }

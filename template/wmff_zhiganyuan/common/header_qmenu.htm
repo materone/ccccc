@@ -1,0 +1,40 @@
+<div id="qmenu_menu" class="p_pop {if !$_G['uid']}blk{/if}" style="display: none;">
+	<!--{hook/global_qmenu_top}-->
+	<!--{if $_G['uid']}-->
+		<ul class="cl nav">
+			<!--{loop $_G['setting']['mynavs'] $nav}-->
+				<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+					<li>$nav[code]</li>
+				<!--{/if}-->
+			<!--{/loop}-->
+		</ul>
+	<!--{elseif $_G[connectguest]}-->
+		<div class="ptm pbw hm">
+			{lang connect_fill_profile_to_visit}
+		</div>
+	<!--{else}-->
+		<div class="ptm pbw hm">
+			{lang my_nav_login}
+		</div>
+	<!--{/if}-->
+	<!--{if $_G['setting']['showfjump']}--><div id="fjump_menu" class="btda"></div><!--{/if}-->
+	<!--{hook/global_qmenu_bottom}-->
+	<div id="scbar_hot">
+						<!--{if $_G['setting']['srchhotkeywords']}-->
+							<strong class="xw1">{lang hot_search}: </strong>
+							<!--{loop $_G['setting']['srchhotkeywords'] $val}-->
+								<!--{if $val=trim($val)}-->
+									<!--{eval $valenc=rawurlencode($val);}-->
+									<!--{block srchhotkeywords[]}-->
+										<!--{if !empty($searchparams[url])}-->
+											<a href="$searchparams[url]?q=$valenc&source=hotsearch{$srchotquery}" target="_blank" class="xi2" sc="1">$val</a>
+										<!--{else}-->
+											<a href="search.php?mod=forum&srchtxt=$valenc&formhash={FORMHASH}&searchsubmit=true&source=hotsearch" target="_blank" class="xi2" sc="1">$val</a>
+										<!--{/if}-->
+									<!--{/block}-->
+								<!--{/if}-->
+							<!--{/loop}-->
+							<!--{echo implode('', $srchhotkeywords);}-->
+						<!--{/if}-->
+					</div>
+</div>

@@ -1,0 +1,24 @@
+/* 论坛首页分区标题 */
+.fl .bm_h { background: #079CEC none;  _border-color: #ddd; border-color: #fff; -webkit-box-shadow: 3px 3px 15px rgba(100,100,100,0.5); -o-box-shadow: 3px 3px 15px rgba(100,100,100,0.5); -moz-box-shadow: 3px 3px 15px rgba(100,100,100,0.5); -ms-box-shadow: 3px 3px 15px rgba(100,100,100,0.5); box-shadow: 3px 3px 15px rgba(100,100,100,0.5);  }
+
+/*板块排列*/
+
+/* 分区标题和子版块标题 */
+.bm .bm_h h2 a, .bm .bm_h h2  { color: #fff; }
+#f_pst h2 { color: #000; }
+
+/*板块图标外围*/
+.fl_tb .fl_icn_g, .fl_tb .fl_icn { width: 80px; }
+
+/* 板块图标 */
+ .fl_icn, .fl_icn_g { width:100%; margin-right: 5px; }
+
+ /*板块简介右侧空白和板块简介颜色*/
+ .fl_g dl { margin-right: 10px; }
+	.fl_g p.xg2, .fl_tb p.xg2 { color: #aaa; }
+
+ /*板块标题*/
+  .fl_g dt a, .fl_tb h2 a { font-family: 微软雅黑,'Microsoft YaHei',黑体,SimHei,'Arial black'; font-size: 16px; font-weight: bold; }
+
+/* 导航下移 */
+#nv_wrap { background: #2B7ACD; }

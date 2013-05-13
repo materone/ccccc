@@ -1,0 +1,29 @@
+﻿/*
+[name]&#x7EA2;_wmff[/name]
+[iconbgcolor]#f2d8d3[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+body { background: url(background.png) ;
+  background-attachment: fixed;
+ }
+ 
+ #hd{
+background: none;
+}
+.wmff_header { background:  url(bgimg.jpg) no-repeat 50% 0px;
+ 
+ }
+ .wmff_contentresize, .wmff_footer, .wmff_nav, #mu ul {
+box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+ 
+.wmff_nav,#toptb,.wmff_footer{opacity: 0.9;
+ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);}
+.wmff_header #toptb a {
+color: #454545;
+}
+.pipe { 
+color: gray;
+}
+ 

@@ -1,0 +1,17 @@
+<li id="comment_{$comment[cid]}_li cl"><a href="home.php?mod=space&uid=$comment[uid]" class="comment-avatar" title="$comment[username]" c="1"><!--{avatar($comment[uid],small)}--></a>
+  <div class="content">
+    <span class="user-name"><a href="home.php?mod=space&uid=$comment[uid]">$comment[username]</a> : </span>
+    <div class="cmt-content"><!--{if $_G[adminid] == 1 || $comment[uid] == $_G[uid] || $comment[status] != 1}-->$comment[message]<!--{else}--> {lang moderate_not_validate}<!--{/if}--></div>
+    <div class="info">
+      <p class="time z"><!--{date($comment[dateline])}--></p>
+      <p class="operating z"> <span class="vote"> <a href="javascript:void(0);" class="vote-num" style="display:none;">0</a> <a href="javascript:void(0);" class="vote-up"></a> <a href="javascript:void(0);" class="vote-down" style="display: none;"></a> </span> </p>
+      <p class="y">
+		<!--{if !isset($_G[makehtml])}--><a href="javascript:;" onclick="portal_comment_requote($comment[cid], '$article[aid]');">{lang quote}</a> <!--{/if}-->
+		<!--{if ($_G['group']['allowmanagearticle'] || $_G['uid'] == $comment['uid']) && $_G['groupid'] != 7 && !$article['idtype']}-->
+		 - <a href="portal.php?mod=portalcp&ac=comment&op=edit&cid=$comment[cid]" id="c_$comment[cid]_edit" onclick="showWindow(this.id, this.href, 'get', 0);">{lang edit}</a> - 
+		<a href="portal.php?mod=portalcp&ac=comment&op=delete&cid=$comment[cid]" id="c_$comment[cid]_delete" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+		<!--{/if}-->
+      </p>
+    </div>
+  </div>
+</li> 

@@ -1,0 +1,7 @@
+<!--{loop $_G['setting']['navs'] $nav}-->
+<!--{if $nav[navid]=='mn_forum'}-->
+<li class="menu-item menu-li {if $mnid == mn_forum}current{/if}" id="mn_forum" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'mn_forum','pos':'43!','ctrlclass':'a','duration':2});showForummenu($_G[fid]);})"><a href="$nav[filename]" hidefocus="true" title="$nav[navname]">$nav[navname]</a></li>
+<!--{else}-->
+<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li  class="menu-item menu-li {if $mnid == $nav[navid]}current{/if}"$nav[nav]></li><!--{/if}-->
+<!--{/if}-->
+<!--{/loop}-->

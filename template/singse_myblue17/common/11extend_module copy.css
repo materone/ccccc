@@ -1,0 +1,19 @@
+/** forum::index **/
+/*ÂÛÌ³N¸ñ*/
+.singse_n { padding: 0 0 0 0; position: relative; height: 310px;}
+.singse_n .singse_l, .singse_n .singse_r { height: 334px; overflow: hidden; border-radius: 5px; background: #5A5A5A;}
+.singse_n .singse_l .frame-tab .tb-c { height: 257px; overflow: hidden; background: #EFEFF1; padding: 10px; border-radius: 5px;}
+.singse_n .singse_l .frame-title, .frametitle, .tab-title { background: none; border: none;}
+.singse_n .singse_l .title { height: 37px; line-height: 37px; padding-left: 10px;}
+.singse_n .singse_l .tb li { width: 85px; height: 37px; line-height: 37px; margin-right: 5px; background: url({STYLEIMGDIR}/tab_list.png) no-repeat; text-align: center}
+.singse_n .singse_l .tb .a a { background: url({STYLEIMGDIR}/tab_cur.png) no-repeat; color: #5A5A5A;}
+.singse_n .singse_l .tb a { width: 85px; padding: 0; color: #FFF; font-weight: normal;}
+.singse_n .singse_l .tb li, .singse_n .singse_l .tb li a { border: none;}
+.singse_n .singse_l .tab-title { width: 90% !important; height: 37px; overflow: hidden;}
+.singse_n .singse_l .module { background: #EFEFF1; padding: 0 10px 10px 10px; border-radius: 5px}
+.singse_n .singse_l .module li { width: 98%; padding: 4px 5px 4px 10px; border-bottom: dashed 1px #CCC; font-size: 14px; background: url(tdot.jpg) no-repeat 0 15px;}
+.singse_n .singse_l .module li .org { color: #C02E0A;}
+.singse_n .singse_l { width: 70%; float: right; height: 334px; overflow: hidden;}
+.singse_n .singse_r { width: 420px; height: 314px; overflow: hidden; position: absolute; top: 0; right: 0; padding: 10px;}
+.singse_n .singse_r .slideshow span.title { width: 420px; text-indent: 0; text-align: center;}
+/** end **/

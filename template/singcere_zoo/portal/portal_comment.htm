@@ -1,0 +1,60 @@
+    <div id="comment" class="comment" style=" width: 340px;">
+      <!--{if !$data[htmlmade]}-->
+      <div class="main-comment">
+        <div class="comment-box">
+		<form id="cform" name="cform" action="$form_url" method="post" autocomplete="off">
+          <div class="comment-textarea">
+				<textarea name="message" rows="3" class="comment-input" id="message" onkeydown="ctrlEnter(event, 'commentsubmit_btn');" onclick="$('comment-btn').style.display='block';"></textarea>
+				<!--{if checkperm('seccode') && ($secqaacheck || $seccodecheck)}-->
+					<!--{block sectpl}--><sec> <span id="sec<hash>" onclick="showMenu(this.id);"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
+					<div class="mtm"><!--{subtemplate common/seccheck}--></div>
+				<!--{/if}-->
+				<!--{if !empty($topicid) }-->
+					<input type="hidden" name="referer" value="$topicurl#comment" />
+					<input type="hidden" name="topicid" value="$topicid">
+				<!--{else}-->
+					<input type="hidden" name="portal_referer" value="$viewurl#comment">
+					<input type="hidden" name="referer" value="$viewurl#comment" />
+					<input type="hidden" name="id" value="$data[id]" />
+					<input type="hidden" name="idtype" value="$data[idtype]" />
+					<input type="hidden" name="aid" value="$aid">
+				<!--{/if}-->
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<input type="hidden" name="replysubmit" value="true">
+				<input type="hidden" name="commentsubmit" value="true" />
+          </div>
+          <div class="comment-bottom mg-t-s cl" id="comment-btn">
+			<button type="submit" name="commentsubmit_btn" id="commentsubmit_btn" value="true" class="pn pnc y"><strong>{lang comment}</strong></button>
+          </div>
+        </form>
+        </div>
+      </div>
+      <!--{/if}-->
+      <div class="comment-list-title"> <span class="more-comments"> <a href="$common_url" class="on">评论<!--{if $data[commentnum]}-->(<em id="_commentnum">$data[commentnum]</em>)<!--{/if}--></a></span>
+        <div id="commentSort" class="select">
+          <div class="current png"><a href="javascript:void(0);" wid="comment_time_desc">按最新排序</a></div>
+          <div class="options"> <a href="javascript:void(0);" wid="comment_time_asc">按最早排序</a> <a href="javascript:void(0);" wid="like_count_desc">按最热排序</a> </div>
+        </div>
+      </div>
+      <div class="comment-list" id="itemCommentList">
+        <div class="jScrollPaneContainer">
+          <ul class="s-img-list">
+
+			<!--{loop $commentlist $comment}-->
+			<!--{template portal/portal_comment_li}-->
+			<!--{if !empty($aimgs[$comment[cid]])}-->
+				<script type="text/javascript" reload="1">aimgcount[{$comment[cid]}] = [<!--{echo implode(',', $aimgs[$comment[cid]]);}-->];attachimgshow($comment[cid]);</script>
+			<!--{/if}-->
+			<!--{/loop}-->
+			<!--{if !empty($pricount)}-->
+				<p class="mtn mbn y">{lang hide_portal_comment}</p>
+			<!--{/if}-->
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    	
+    

@@ -1,0 +1,67 @@
+/*全局调整*/
+.hdc { background: #5A5A5A; min-height: 110px; _height: 110px; }
+#hd .wp { padding: 0;}
+.fastlg .pns,.fastlg .pns a,.fastlg .ftid,#um,#um a { color: #EFEFEF;}
+#ls_fastloginfield_ctrl { background: #FFF;}
+#nv { height: 43px; line-height: 43px; background: url({STYLEIMGDIR}/topbg.png) repeat-x 0 -340px;}
+#nv li { height: 39px; line-height: 42px; background: url({STYLEIMGDIR}/topbg.png) no-repeat -1px -591px; font-weight: normal}
+#nv li:hover { background: url(topbg.png) no-repeat repeat-x 0 -389px; box-shadow: inset 0 0 3px #CCC;}
+#nv li.a {  background: url({STYLEIMGDIR}/topbg.png) repeat-x 0 -389px ; box-shadow: inset 0 0 3px #CCC;}
+#nv li a:hover { background: none;}
+.ie6 #nv li { line-height: 40px; }
+#nv ul { width: 65%; float:left;}
+#qmenu { width: 75px; height: 33px; line-height: 33px; background: #3D3E40; color: #EFEFEF; margin: 4px 0; padding: 0;}
+#hd h2 { padding: 20px 0;}
+#um, #hd .fastlg { padding-top: 30px;}
+#extcreditmenu.a, #g_upmine.a { border: none;}
+.ct2_a, .ct3_a { background: #FFF;}
+#nv_group .bmw .bm_h { background: #2AAAED;}
+.bm_c { background: #FFF;}
+
+/*搜索*/
+.search { width: 220px; height: 33px; line-height: 20px; margin-top: 4px; position: relative; z-index: 2; }
+.clearfix { display: block; zoom: 1;}
+#scbar_txt { width: 115px; border-right: 0; outline: none; font-size: 14px; float: left;}
+#scbar_type { height: 33px; line-height: 33px; background-color: #EBEDEE; padding: 0 15px 0 10px; float: left;}
+.search input { background: #EBEDEE; border: #006398 1px solid; padding-left: 5px; height: 29px; line-height: 29px; width: 95px; color: #999; border-right: none; float: left;}
+#scbar_btn { width: 42px; height: 33px; float: left; background: url({STYLEIMGDIR}/search_ico.png) no-repeat;}
+#nv .p_pop { width: 3%;}
+#nv .p_pop li { clear: both; background: none; border: none; height: 28px; line-height: 28px;}
+#nv .p_pop li a { color: #333; font-weight: normal; border: none}
+#nv .p_pop li a:hover { background: #D7E6F4;}
+
+/*分区版块*/
+.bmw .bm_h { height: 40px; border: none;}
+.bmw .bm_h,.bmw .bm_h a { color: #FFF;}
+.fl .bm, .fl { border: none; background: transparent;}
+.fl .bm_c { border: #AAA 1px solid; border-top: none; box-shadow: 0 0 12px #AAA; margin: -3px 3px 0; z-index: 999; position: relative;}
+.fl .bm_c h2 a { font-size: 16px;}
+.bmw { margin-bottom: 10px !important;}
+.fl .bm_h { padding: 0;}
+.fl .bm_h h2 { font-size: 14px;}
+.tlan_l { width: 10px; height: 40px; float:left; background: url({STYLEIMGDIR}/tdql.jpg) no-repeat;}
+.tlan_r { width: 10px; height: 40px; float:right; background: url({STYLEIMGDIR}/tdqr.jpg) no-repeat;}
+.fl_g dt a { font-size: 16px;}
+.fl_g .ptn { color: #999;}
+.fl_g dd a { color: #0A86C0;}
+.fl_tb td { padding: 10px 5px;}
+
+/*版块列表*/
+#nv_forum .bdl { border: none; background: #5A5A5A; color: #FFF;}
+#nv_forum .bdl dt {  background: #EFEFF1; margin: 5px 0; border: none;}
+#nv_forum .bdl dt a { background-color: #2AAAED; color: #FFF;}
+#nv_forum .bdl dl.a { background: #EFEFF1;}
+#nv_forum .bdl dd.bdl_a a { background: #DFDDD9; color: #F4630B}
+#nv_forum .bdl dd a { margin: 0;}
+#nv_forum .bdl dl { margin: -1px -5px 0}
+#nv_forum .bdl_h { font-size: 18px; text-align: center; font-weight: 500}
+
+/*脚部*/
+.pgs #newspecial, .pgs #newspecialtmp { width: 80px; height: 33px; background: url({STYLEIMGDIR}/post.gif) no-repeat;}
+.pgs #newspecial img, .pgs #newspecialtmp img { display: none;}
+.pgs #post_reply, .pgs #post_replytmp { width: 80px; height: 33px; background: url({STYLEIMGDIR}/post.gif) no-repeat 0 -33px}
+.pgs #post_reply img, .pgs #post_replytmp img { display: none;}
+#ft { background: #1196DB; padding: 0 0 30px}
+#ft, #ft a { color: #EFEFEF;}
+#flk { background: #5A5A5A; text-align: center; padding: 10px;}
+#frt p { text-align: center; height: 24px; line-height: 24px;}

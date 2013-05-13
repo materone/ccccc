@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="admin.lang.php" server="113.10.242.28/wwwroot/" local="130127263434538965" remote="130072047000000000" Dst="0" />
+<file name="admin_admin.htm" server="113.10.242.28/wwwroot/" local="130127263434959186" remote="130072047000000000" Dst="0" />
+<file name="admin_app.htm" server="113.10.242.28/wwwroot/" local="130127263435459086" remote="130072047000000000" Dst="0" />
+<file name="admin_badword.htm" server="113.10.242.28/wwwroot/" local="130127263436639232" remote="130072047000000000" Dst="0" />
+<file name="admin_cache.htm" server="113.10.242.28/wwwroot/" local="130127263436831789" remote="130072047000000000" Dst="0" />
+<file name="admin_credit.htm" server="113.10.242.28/wwwroot/" local="130127263437381650" remote="130072047000000000" Dst="0" />
+<file name="admin_domain.htm" server="113.10.242.28/wwwroot/" local="130127263438871822" remote="130072047000000000" Dst="0" />
+<file name="admin_db.htm" server="113.10.242.28/wwwroot/" local="130127263439302023" remote="130072047000000000" Dst="0" />
+<file name="admin_feed.htm" server="113.10.242.28/wwwroot/" local="130127263440071992" remote="130072047000000000" Dst="0" />
+<file name="admin_frame_index.htm" server="113.10.242.28/wwwroot/" local="130127263441552167" remote="130072047000000000" Dst="0" />
+<file name="admin_frame_header.htm" server="113.10.242.28/wwwroot/" local="130127263442002218" remote="130072047000000000" Dst="0" />
+<file name="admin_frame_main.htm" server="113.10.242.28/wwwroot/" local="130127263443092375" remote="130072047000000000" Dst="0" />
+<file name="admin_frame_menu.htm" server="113.10.242.28/wwwroot/" local="130127263443322391" remote="130072047000000000" Dst="0" />
+<file name="admin_log.htm" server="113.10.242.28/wwwroot/" local="130127263443872627" remote="130072047000000000" Dst="0" />
+<file name="admin_login.htm" server="113.10.242.28/wwwroot/" local="130127263445243277" remote="130072047000000000" Dst="0" />
+<file name="admin_mail.htm" server="113.10.242.28/wwwroot/" local="130127263446328322" remote="130072047000000000" Dst="0" />
+<file name="admin_note.htm" server="113.10.242.28/wwwroot/" local="130127263446353324" remote="130072047000000000" Dst="0" />
+<file name="admin_pm_clear.htm" server="113.10.242.28/wwwroot/" local="130127263447703386" remote="130072047000000000" Dst="0" />
+<file name="admin_pm_search.htm" server="113.10.242.28/wwwroot/" local="130127263448103398" remote="130072047000000000" Dst="0" />
+<file name="admin_tag.htm" server="113.10.242.28/wwwroot/" local="130127263449328688" remote="130072047000000000" Dst="0" />
+<file name="admin_user.htm" server="113.10.242.28/wwwroot/" local="130127263450503511" remote="130072047000000000" Dst="0" />
+<file name="footer.htm" server="113.10.242.28/wwwroot/" local="130127263451253538" remote="130072047000000000" Dst="0" />
+<file name="footer_ajax.htm" server="113.10.242.28/wwwroot/" local="130127263452303580" remote="130072047000000000" Dst="0" />
+<file name="footer_client.htm" server="113.10.242.28/wwwroot/" local="130127263453378646" remote="130072047000000000" Dst="0" />
+<file name="header.htm" server="113.10.242.28/wwwroot/" local="130127263455078722" remote="130072047000000000" Dst="0" />
+<file name="admin_setting.htm" server="113.10.242.28/wwwroot/" local="130127263455853750" remote="130072047000000000" Dst="0" />
+<file name="header_ajax.htm" server="113.10.242.28/wwwroot/" local="130127263455878759" remote="130072047000000000" Dst="0" />
+<file name="header_client.htm" server="113.10.242.28/wwwroot/" local="130127263456953797" remote="130072047000000000" Dst="0" />
+<file name="index.htm" server="113.10.242.28/wwwroot/" local="130127263457983875" remote="130072047000000000" Dst="0" />
+<file name="main.lang.php" server="113.10.242.28/wwwroot/" local="130127263458583957" remote="130072047000000000" Dst="0" />
+<file name="message.htm" server="113.10.242.28/wwwroot/" local="130127263460074142" remote="130072047000000000" Dst="0" />
+<file name="message_client.htm" server="113.10.242.28/wwwroot/" local="130127263460774238" remote="130072047000000000" Dst="0" />
+<file name="messages.lang.php" server="113.10.242.28/wwwroot/" local="130127263461304308" remote="130072047000000000" Dst="0" />
+<file name="plugin_footer.htm" server="113.10.242.28/wwwroot/" local="130127263462828584" remote="130072047000000000" Dst="0" />
+<file name="pm_blackls.htm" server="113.10.242.28/wwwroot/" local="130127263463975108" remote="130072047000000000" Dst="0" />
+<file name="plugin_header.htm" server="113.10.242.28/wwwroot/" local="130127263464425158" remote="130072047000000000" Dst="0" />
+<file name="pm_editorbar.htm" server="113.10.242.28/wwwroot/" local="130127263465505473" remote="130072047000000000" Dst="0" />
+<file name="pm_ls.htm" server="113.10.242.28/wwwroot/" local="130127263465665319" remote="130072047000000000" Dst="0" />
+<file name="pm_member.htm" server="113.10.242.28/wwwroot/" local="130127263466175397" remote="130072047000000000" Dst="0" />
+<file name="pm_send.htm" server="113.10.242.28/wwwroot/" local="130127263467705579" remote="130072047000000000" Dst="0" />
+<file name="pm_nav.htm" server="113.10.242.28/wwwroot/" local="130127263468145650" remote="130072047000000000" Dst="0" />
+<file name="pm_view.htm" server="113.10.242.28/wwwroot/" local="130127263469165758" remote="130072047000000000" Dst="0" />
+<file name="user_avatar.htm" server="113.10.242.28/wwwroot/" local="130127263469760843" remote="130072047000000000" Dst="0" />
+<file name="templates.lang.php" server="113.10.242.28/wwwroot/" local="130127263471360916" remote="130072047000000000" Dst="0" />
+</dwsync>

@@ -1,0 +1,121 @@
+
+<!--{template common/header}-->
+<!--[name]Zoo列表页[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{eval require_once DISCUZ_ROOT.'template/singcere_zoo/common/tpl_func.php';}-->
+<!--{eval $sidebar_nav = sc_zoo_portal_sidebarnav();}-->
+<!--{eval $newestreplies = sc_zoo_portal_newest_replies($cat[catid]);}-->
+<style id="diy_style" type="text/css"></style>
+
+<div class="wp cl">
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+		<div class="item-more">
+			<div class="zv-title cl">
+				<h1>$cat[catname]</h1>
+				<!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="z rss" target="_blank" title="RSS">{lang rss_subscribe_this}</a><!--{/if}-->
+				<!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+				<a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="y xi2 addnew">投稿</a>
+				<!--{/if}-->
+				<span class="arrow"></span>
+			</div>
+			<div class="zn-list xld">
+			<!--{loop $list['list'] $value}-->
+			<!--{eval $highlight = article_title_style($value);}-->
+			<!--{eval $article_url = fetch_article_url($value);}-->
+				<dl class="bbda cl">
+					<div class="zn-message {if !$value[pic]}zn-nopic{/if}">
+					<dt class="zn-title"><a href="$article_url" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></dt>
+					<dd class="cl">
+						$value[summary]
+					</dd>
+					<dd class="zn-time">
+						<!--{if $value[catname] && $cat[subs]}-->{lang category}: <label><a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2">$value[catname]</a></label>&nbsp;&nbsp;<!--{/if}-->
+						<span class="xg1"> $value[dateline]</span>
+					</dd>
+					</div>
+					<!--{if $value[pic]}--><div class="zn-pic"><a href="$article_url"><img src="$value[pic]" alt="$value[title]" class="tn" /></a></div><!--{/if}-->
+				</dl>
+			<!--{/loop}-->
+			</div>
+			<!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	<div class="sd pph">
+
+		<div class="drag">
+			<!--[diy=diyrighttop]--><div id="diyrighttop" class="area"></div><!--[/diy]-->
+		</div>
+
+		<div class="item-more">
+			<div class="zv-title cl">
+				<h3>资讯分类</h3>
+				<span class="arrow"></span>
+			</div>
+			<div class="bm">
+				<!--{loop $sidebar_nav $nav}-->
+				<div class="zn-nav cl">
+					<div class="zn-nav-t z"><a href="$nav[cat][caturl]">$nav[cat][catname]：</a></div>
+					<div class="zn-nav-s z"><ul><!--{loop $nav[sub] $subnav}--><li><a {if $subnav['catid'] == $cat[catid]}class="cursor"{/if} href="$subnav[caturl]">$subnav[catname]</a></li><!--{/loop}--></ul></div>
+				</div>
+				<!--{/loop}-->
+			</div>
+		</div>
+
+		<div class="item-more">
+			<div class="zv-title cl">
+				<h3>$cat[catname]最新评论</h3>
+				<span class="arrow"></span>
+			</div>
+			<div class="bm">
+			    <div class="comment">
+			      <div class="comment-list" id="itemCommentList">
+			        <div class="jScrollPaneContainer">
+			          <ul class="s-img-list">
+                        <!--{loop $newestreplies $reply}-->
+                        <!--{eval $article_url = fetch_article_url($reply);}-->
+			            <li class="cl"> <a href="home.php?mod=space&uid=$reply[uid]" class="comment-avatar" title="$reply[username]" c="1"> <!--{avatar($reply[uid],small)}--> </a>
+			              <div class="content"> <span class="user-name"><a href="home.php?mod=space&uid=$reply[uid]"> $reply[username]</a> 评论了 <a href="$article_url">$reply[title]</a></span> 
+
+			              	<div class="cmt-content">: $reply[message]</div>
+			                <div class="info">
+			                  <p class="time z"><!--{eval echo dgmdate($reply['dateline'], 'u');}--> </p>
+			                  <p class="operating z"> <span class="vote"> <a href="javascript:void(0);" class="vote-num" style="display:none;">0</a> <a href="javascript:void(0);" class="vote-up"></a> <a href="javascript:void(0);" class="vote-down" style="display: none;"></a> </span> </p>
+			                </div>
+			              </div>
+			            </li>
+			            <!--{/loop}-->
+			          </ul>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="item-more">
+			<div class="bm">
+				<!--[diy=ad2]--><div id="ad2" class="area"></div><!--[/diy]-->
+			</div>
+		</div>
+
+		<div class="drag">
+			<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+		</div>
+
+	</div>
+</div>
+
+<!--{template common/footer}-->

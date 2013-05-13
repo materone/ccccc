@@ -1,0 +1,25 @@
+﻿/*
+[name]&#x84DD;_wmff[/name]
+[iconbgcolor]#0053B9[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+body { background: #FFF url(bgimg.jpg) no-repeat 50% 0;
+
+ }
+ 
+
+.wmff_header ,#hd{
+background: none;
+}
+ .wmff_contentresize, .wmff_footer, .wmff_nav, #mu ul {
+box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+ 
+ 
+.wmff_header #toptb a {
+color: #454545;
+}
+.pipe { 
+color: gray;
+}

@@ -1,0 +1,321 @@
+<!--{template common/header}-->
+<!--[name]Zoo内容页[/name]-->
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']), imagemaxwidth = '{$_G['setting']['imagemaxwidth']}', aimgcount = new Array();</script>
+<!--{hook/view_article_top}-->
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp"> 
+  <!--[diy=diy1]-->
+  <div id="diy1" class="area"></div>
+  <!--[/diy]--> 
+</div>
+
+<div id="ct" class="ct2 wp cl">
+  <div class="mn" id="mn">
+    <div class="bm vw">
+      <div class="h hm">
+        <h1 class="ph">$article[title] <!--{if $article['status'] == 1}-->({lang moderate_need})<!--{elseif $article['status'] == 2}-->({lang ignored})<!--{/if}--></h1>
+        <p class="xg1"> $article[dateline]<span class="pipe">|</span> {lang view_publisher}: <a href="home.php?mod=space&uid=$article[uid]">$article[username]</a><span class="pipe">|</span> 
+          {lang view_views}: <em id="_viewnum"><!--{if $article[viewnum] > 0}-->$article[viewnum]<!--{else}-->0<!--{/if}--></em><span class="pipe">|</span>
+          {lang view_comments}: <!--{if $article[commentnum] > 0}--><a href="$common_url" title="{lang view_all_comments}"><em id="_commentnum">$article[commentnum]</em></a><!--{else}-->0<!--{/if}-->
+          <!--{if $article[author]}--><span class="pipe">|</span>{lang view_author_original}: $article[author]<!--{/if}--> 
+          <!--{if $article[from]}--><span class="pipe">|</span>{lang from}: <!--{if $article[fromurl]}--><a href="$article[fromurl]" target="_blank">$article[from]</a><!--{else}-->$article[from]<!--{/if}--><!--{/if}--> 
+          
+          <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}--> 
+          <span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$article[aid]">{lang edit}</a> 
+          <!--{if $article[status]>0 && ($_G['group']['allowmanagearticle'] || $categoryperm[$value['catid']]['allowmanage'])}--> 
+          <span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=verify&aid=$article[aid]" id="article_verify_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang moderate}</a> 
+          <!--{else}--> 
+          <span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$article[aid]" id="article_delete_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a> 
+          <!--{/if}--> 
+          <!--{/if}--> 
+          
+          <!--{hook/view_article_op_extra}--> 
+          <!--{if $article[status]==0 && ($_G['group']['allowdiy']  || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 5) || getstatus($_G['member']['allowadmincp'], 6))}--> 
+          <span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=portalblock&op=recommend&idtype=aid&id=$article[aid]" onclick="showWindow('recommend', this.href, 'get', 0)">{lang blockdata_recommend}</a> 
+          <!--{/if}--> 
+          
+          <!--{hook/view_article_subtitle}--> 
+        </p>
+      </div>
+      
+      <!--[diy=diysummarytop]-->
+      <div id="diysummarytop" class="area"></div>
+      <!--[/diy]--> 
+      
+      <!--{if $article[summary] && empty($cat[notshowarticlesummay])}-->
+      <div class="s">
+        <div><strong>{lang article_description}：</strong>$article[summary]</div>
+        <!--{hook/view_article_summary}--></div>
+      <!--{/if}--> 
+      
+      <!--[diy=diysummarybottom]-->
+      <div id="diysummarybottom" class="area"></div>
+      <!--[/diy]-->
+      
+      <div class="d">      
+        <table cellpadding="0" cellspacing="0" class="vwtb">
+          <tr>
+            <td id="article_content"><!--{ad/article/a_af/1}--> 
+              <!--{if $content[title]}-->
+              
+              <div class="vm_pagetitle xw1">$content[title]</div>
+              
+              <!--{/if}--> 
+              $content[content] </td>
+          </tr>
+        </table>
+        <!--{hook/view_article_content}--> 
+        <!--{if $multi}-->
+        <div class="ptw pbw cl">$multi</div>
+        <!--{/if}--> 
+        
+        <!--[diy=diycontentbottom]-->
+        <div id="diycontentbottom" class="area"></div>
+        <!--[/diy]--> 
+
+
+        <!--{if !empty($contents)}-->
+        <div id="inner_nav" class="ptn xs1">
+          <h3>{lang article_inner_navigation}</h3>
+          <ul class="xl xl2 cl">
+            <!--{loop $contents $key $value}-->
+            <!--{eval $curpage = $key+1;}-->
+            <!--{eval $inner_view_url = helper_page::mpurl($viewurl, 'page=', $curpage);}-->
+            <li>&bull; <a href="$inner_view_url"{if $key === $start} class="xi1"{/if}>{lang article_inner_page_pre} {$curpage} {lang article_inner_page} $value[title]</a></li>
+            <!--{/loop}-->
+          </ul>
+        </div>
+        <!--{/if}-->
+        
+      </div>
+      <!--{if !empty($aimgs[$content[pid]])}--> 
+      <script type="text/javascript" reload="1">aimgcount[{$content[pid]}] = [<!--{echo implode(',', $aimgs[$content[pid]]);}-->];attachimgshow($content[pid]);</script> 
+      <!--{/if}--> 
+      
+      <!--{if !empty($_G['setting']['pluginhooks']['view_share_method'])}-->
+      <div class="tshare cl"> <strong>{lang viewthread_share_to}:</strong> 
+        <!--{hook/view_share_method}--> 
+      </div>
+      <!--{/if}--> 
+      
+    </div>
+    
+    <!--[diy=diycontentrelatetop]-->
+    <div id="diycontentrelatetop" class="area"></div>
+    <!--[/diy]--> 
+    
+    <!--{ad/article/mbm hm/2}--><!--{ad/article/mbm hm/3}--> 
+
+
+
+
+<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+<div id="toolBar">
+  <div class="board" id="tb_items">
+    <div class="btn like">
+          <!--{eval $clicknum = 0;}-->
+          <!--{loop $clicks $key $value}-->
+          <!--{eval $clicknum = $clicknum + $value['clicknum'];}-->
+      <div id="like-num" class="like-num ac{$value[classid]}">{$value[clicknum]}</div> <a href="home.php?mod=spacecp&ac=click&op=add&clickid=$key&idtype=$idtype&id=$id&hash=$hash&handlekey=clickhandle" id="click_{$idtype}_{$id}_{$key}" onclick="{if $_G[uid]}ajaxmenu(this);{else}showWindow(this.id, this.href);{/if}doane(event);" class="showtip icon"></a><span class="tips" style="display:none"><span class="arrow">◆</span><span class="desc">喜欢</span></span>
+          <!--{/loop}-->
+    </div>
+    <!--{if helper_access::check_module('share')}-->
+    <div class="btn read-later"> <a href="home.php?mod=spacecp&ac=share&type=article&id=$article[aid]&handlekey=sharearticlehk_{$article[aid]}" id="a_share" onclick="showWindow(this.id, this.href, 'get', 0);"  class="showtip icon collect-tbc"></a><span class="tips" style="display:none;"><span class="arrow">◆</span>{lang share}</span> </div>
+    <!--{/if}-->
+    <div class="btn collect"><a href="home.php?mod=spacecp&ac=favorite&type=article&id=$article[aid]&handlekey=favoritearticlehk_{$article[aid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" class="showtip icon collect-item"></a><span class="tips" style="display: none;"><span class="arrow">◆</span>{lang favorite}</span></a></div>
+    <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_b btn share extension" style="line-height: 12px;">
+    <div class="icon showtip">
+    <span class="tips" style="display:none;"><span class="arrow">◆</span><span class="shareCount"></span></span>
+    </div>
+    </div>
+    <!-- Baidu Button END -->
+  </div>
+</div>
+<script type="text/javascript">
+  function errorhandle_clickhandle(message, values) {
+    if(values['id']) {
+      showCreditPrompt();
+      $('like-num').innerHTML = parseInt($('like-num').innerHTML) + 1;
+      ajaxget('home.php?mod=spacecp&ac=click&op=show&clickid='+values['clickid']+'&idtype='+values['idtype']+'&id='+values['id'], 'click_div');
+    }
+  }
+</script>
+
+
+    <!--{if $clicknum > 0}-->
+    <div class="item-more cl" id="click_div">
+      <div class="zv-title">
+        <h3>喜欢这篇文章 (<a href="javascript:;" onclick="show_click('$idtype', '$id', '$key')">{$clicknum}人</a>)</h3>
+        <span class="arrow"></span> </div>
+          <!--{if $clickuserlist}-->
+          <h3 class="mbm xs1">
+            <!--{if $_G[magic][anonymous]}-->
+            <img src="{STATICURL}image/magic/anonymous.small.gif" alt="anonymous" class="vm" />
+            <a id="a_magic_anonymous" href="home.php?mod=magic&mid=anonymous&idtype=$idtype&id=$id" onclick="ajaxmenu(event,this.id, 1)" class="xg1">{$_G[magic][anonymous]}</a>
+            <!--{/if}-->
+          </h3>
+          <div id="trace_div" class="xs1">
+            <ul id="trace_ul" class="ml mls cl">
+            <!--{loop $clickuserlist $value}-->
+              <li>
+                <!--{if $value[username]}-->
+                <div><a href="home.php?mod=space&uid=$value[uid]" c=1 target="_blank" title="$value[clickname]"><!--{avatar($value[uid], 'small')}--></a></div>
+                <p><a href="home.php?mod=space&uid=$value[uid]" title="$value[username]" target="_blank">$value[username]</a></p>
+                <!--{else}-->
+                <div><img src="{STATICURL}image/magic/hidden.gif" alt="$value[clickname]" /></div>
+                <p>{lang anonymity}</p>
+                <!--{/if}-->
+              </li>
+            <!--{/loop}-->
+            </ul>
+          </div>
+          <!--{/if}-->
+
+          <!--{if $click_multi}--><div class="pgs cl mtm">$click_multi</div><!--{/if}-->
+    </div>
+    <!--{/if}-->
+
+    <!--{if $article['preaid'] || $article['nextaid']}-->
+    <div class="pren pbm cl">
+      <!--{if $article['prearticle']}--><em class="z">{lang pre_article}<a href="{$article['prearticle']['url']}">{$article['prearticle']['title']}</a></em><!--{/if}-->
+      <!--{if $article['nextarticle']}--><em class="y">{lang next_article}<a href="{$article['nextarticle']['url']}">{$article['nextarticle']['title']}</a></em><!--{/if}-->
+    </div>
+    <!--{/if}-->
+
+    <div class="item-more cl">
+      <div class="zv-title">
+        <h3>[ <a href="{echo getportalcategoryurl($cat[catid])}">$cat[catname]</a> ] 热门文章</h3>
+        <span class="arrow"></span> </div>
+        <div class="content related-items">
+          <!--[diy=hot-items]-->
+          <div id="hot-items" class="area"></div>
+          <!--[/diy]--> 
+        </div>
+    </div>
+
+
+
+    <!--{if $article['related'] || $_G['group']['allowmanagearticle']}-->
+    <div id="related_article" class="item-more related-items cl">
+      <div class="zv-title">
+        <h3 class="cl">
+          <span class="z">{lang view_related}</span> 
+          <span class="y">
+          <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}--> 
+          <a  id="related_article" href="portal.php?mod=portalcp&ac=related&aid=$article[aid]&catid=$article[catid]&update=1" onclick="showWindow(this.id, this.href, 'get', 0);return false;">{lang article_related}</a> 
+          <!--{/if}--> 
+          </span>
+        </h3>
+        <span class="arrow"></span> </div>
+      <div class="">
+        <ul class="xl xl2 cl" id="raid_div">
+          <!--{eval $x==1}-->
+          <!--{loop $article['related'] $raid $rvalue}-->
+            <input type="hidden" value="$raid" />
+            <li {if ( $x % 2 ) == 0}class="y"{/if}><a href="{$rvalue[uri]}">{$rvalue[title]}</a></li>
+          <!--{eval $x++}-->
+          <!--{/loop}-->
+        </ul>
+      </div>
+    </div>
+    <!--{/if}-->
+
+    
+    <!--[diy=diycontentcomment]-->
+    <div id="diycontentcomment" class="area"></div>
+    <!--[/diy]--> 
+    
+  </div>
+  <div class="sd pph"> 
+    
+    <!--{if $article['allowcomment']==1}-->
+    <!--{eval $data = &$article}-->
+    <!--{template portal/portal_comment}-->
+    <!--{/if}-->
+    
+    <!--{hook/view_article_side_top}--> 
+    <!--{hook/view_article_side_bottom}--> 
+    
+  </div>
+</div>
+
+<!--{if $_G['relatedlinks']}--> 
+<script type="text/javascript">
+		var relatedlink = [];
+		<!--{loop $_G['relatedlinks'] $key $link}-->
+		relatedlink[$key] = {'sname':'$link[name]', 'surl':'$link[url]'};
+		<!--{/loop}-->
+		relatedlinks('article_content');
+	</script> 
+<!--{/if}-->
+
+<div class="wp mtn"> 
+  <!--[diy=diy3]-->
+  <div id="diy3" class="area"></div>
+  <!--[/diy]--> 
+</div>
+<input type="hidden" id="portalview" value="1">
+
+
+
+
+
+<!--Append Js Begin-->
+
+  	<script>
+  	function fix_float() {
+  		var st = (document.documentElement && document.documentElement.scrollTop) ||  document.body.scrollTop;
+  		$('toolBar').style.display = "block";
+  	    $('toolBar').style.position = "fixed";
+  	    $('toolBar').style.left = $('index_header').getBoundingClientRect().left - 60 + 'px';
+  	    if(st >= $('ct').offsetTop && $('comment')) {
+  	    	$('comment').style.top = '10px';
+  	    	$('comment').style.left = $('mn').getBoundingClientRect().right + 25 + 'px';
+  	    	$('comment').style.position = "fixed";
+  	    } else {
+  	    	$('comment').style.position = "";
+  	    }
+  	}
+  	
+  	if(!(BROWSER.ie && BROWSER.ie < 7) ) {
+  		fix_float();
+  		_attachEvent(window, 'scroll', fix_float);
+  		_attachEvent(window, 'resize', fix_float);
+  	}
+  	</script>
+
+    <!-- Baidu Button BEGIN -->
+    <script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=6590450" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+    var bds_config={"snsKey":{'tsina':'','tqq':'','t163':'','tsohu':''}} //如果你拥有相应的APPkey，填入两个引号间即可，非技术人员请勿操作。
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+    </script>
+    <!-- Baidu Button END -->
+
+    <!-- ToolBar BEGIN -->
+    <script type="text/javascript">
+    btns = $('tb_items').getElementsByTagName('a');
+    for(var i=0; i<btns.length;i++) {
+    	btns[i].onmouseover=function(){
+    	    this.nextSibling.style.display = "block";
+    	}
+    	btns[i].onmouseout=function(){
+    	    this.nextSibling.style.display = "none";
+    	}
+    }
+    </script>
+    <!-- ToolBar END -->
+
+<!--Append Js End-->
+
+
+
+<style>
+#click_div .atd {display: none;}    
+</style>
+
+<!--{template common/footer}-->
